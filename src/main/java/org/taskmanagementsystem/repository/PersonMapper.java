@@ -3,6 +3,8 @@ package org.taskmanagementsystem.repository;
 import org.taskmanagementsystem.dto.DTO;
 import org.taskmanagementsystem.entity.Person;
 import org.taskmanagementsystem.dto.StringDTO;
+import org.taskmanagementsystem.storage.Mapper;
+
 import java.util.UUID;
 
 public class PersonMapper implements Mapper<Person> {

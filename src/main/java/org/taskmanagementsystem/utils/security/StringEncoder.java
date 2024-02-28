@@ -1,8 +1,8 @@
-package utils.security;
+package org.taskmanagementsystem.utils.security;
 
 import java.util.Random;
 
-public class StringEncoder implements Encoder {
+public class StringEncoder implements utils.security.Encoder {
 static private final long MAGIC1 = 31L;
 static private final long MAGIC2 = 59L;
 static private final int DELAY = 10_253;
@@ -33,7 +33,7 @@ static private long hash() {
 public static void main(String[] args)
 {
         var msg = "password123";
-        Encoder encoder = new StringEncoder();
+        utils.security.Encoder encoder = new StringEncoder();
         var hash = encoder.encode(encoder.encode(msg));
 
         System.out.printf("msg = '%s' passwd = '%s'", msg, hash);
