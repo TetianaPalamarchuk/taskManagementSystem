@@ -1,6 +1,6 @@
-package session;
+package org.taskmanagementsystem.session;
 
-import dto.DTO;
+import org.taskmanagementsystem.dto.DTO;
 
 import java.io.IOException;
 import java.util.Optional;

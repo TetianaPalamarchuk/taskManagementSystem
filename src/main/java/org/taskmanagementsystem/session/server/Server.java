@@ -1,7 +1,8 @@
-package session.server;
+package org.taskmanagementsystem.session.server;
 
-import session.Endpoint;
-import dto.DTO;
+
+import org.taskmanagementsystem.dto.DTO;
+import org.taskmanagementsystem.session.Endpoint;
 
 public interface Server extends Endpoint {
         void start();

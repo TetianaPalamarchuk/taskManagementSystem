@@ -1,7 +1,7 @@
-package session.server;
+package org.taskmanagementsystem.session.server;
 
-import dto.DTO;
-import dto.StringDTO;
+import org.taskmanagementsystem.dto.DTO;
+import org.taskmanagementsystem.dto.StringDTO;
 
 import java.io.*;
 import java.net.ServerSocket;

@@ -1,4 +1,4 @@
-package storage;
+package org.taskmanagementsystem.storage;
 // The Mapper interface is for data exchange,
 // storage and so on
 public interface Mapper<T> {

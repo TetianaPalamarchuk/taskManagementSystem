@@ -1,7 +1,7 @@
-package session.router;
+package org.taskmanagementsystem.session.router;
 
-import dto.DTO;
-import session.server.TCPServer;
+import org.taskmanagementsystem.dto.DTO;
+import org.taskmanagementsystem.session.server.TCPServer;
 
 public class Router extends TCPServer {
 public Router(int port)

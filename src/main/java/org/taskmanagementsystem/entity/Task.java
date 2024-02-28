@@ -1,4 +1,4 @@
-package entity;
+package org.taskmanagementsystem.entity;
 
 import java.util.UUID;
 

@@ -1,4 +1,4 @@
-package dto;
+package org.taskmanagementsystem.dto;
 
 import java.io.*;
 

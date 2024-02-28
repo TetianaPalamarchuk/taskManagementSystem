@@ -1,5 +1,7 @@
-import dto.DTO;
-import dto.StringDTO;
+package org.taskmanagementsystem.session.client;
+
+import org.taskmanagementsystem.dto.DTO;
+import org.taskmanagementsystem.dto.StringDTO;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import session.Endpoint;
+import org.taskmanagementsystem.session.Endpoint;
 
 public  class TCPClient implements Endpoint {
 private String server;

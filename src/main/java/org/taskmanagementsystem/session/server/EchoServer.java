@@ -1,6 +1,5 @@
-package session.server;
-
-import dto.DTO;
+package org.taskmanagementsystem.session.server;
+import org.taskmanagementsystem.dto.DTO;
 
 public class EchoServer extends TCPServer {
 

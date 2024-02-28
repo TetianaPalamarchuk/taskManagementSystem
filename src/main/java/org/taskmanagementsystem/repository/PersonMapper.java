@@ -1,9 +1,8 @@
-package repository;
+package org.taskmanagementsystem.repository;
 
-import entity.Person;
-import dto.DTO;
-import storage.Mapper;
-import dto.StringDTO;
+import org.taskmanagementsystem.dto.DTO;
+import org.taskmanagementsystem.entity.Person;
+import org.taskmanagementsystem.dto.StringDTO;
 import java.util.UUID;
 
 public class PersonMapper implements Mapper<Person> {
