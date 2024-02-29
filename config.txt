@@ -1,0 +1,9 @@
+# config file
+admin=Dmitry
+usersRepository=/home/data/users.db
+tasksRepository=/home/data/tasks.db
+
+#key2=
+#
+key3=value3
+key4=4

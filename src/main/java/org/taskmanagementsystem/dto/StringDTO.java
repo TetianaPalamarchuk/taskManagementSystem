@@ -124,6 +124,10 @@ public String toString()
 
         return sb.toString();
 }
+// name=John & email=test@test.com & id=123 & isActive=true
+// &&&&&&&
+//name=John&email=test@test.com
+// &name1&name2&person
 @Override
 public DTO fromString(String str)
 {
@@ -182,9 +186,9 @@ public static void main(String[] args)
         DTO request = new StringDTO();
 
         //
-        request.set("ID", UUID.randomUUID());
+//        request.set("ID", UUID.randomUUID());
         request.set("name", "John");
-        request.set("hash", 123456);
+        request.set("email", "test@test.com");
 
         System.out.println(request);
 

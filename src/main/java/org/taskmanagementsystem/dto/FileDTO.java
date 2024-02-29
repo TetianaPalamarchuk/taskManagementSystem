@@ -36,7 +36,7 @@ public static void main(String[] args)
 {
         FileDTO dto = new FileDTO();
 
-        dto.fromFile("/home/vlan/IdeaProjects/learningjava/assignment/activity/filedto.txt");
+        dto.fromFile("/home/vlan/IdeaProjects/learningjava/assignment/activity/config.txt");
 
         System.out.println("DTO: " + dto);
         System.out.println("boolean=" + dto.getBoolean("key2"));
