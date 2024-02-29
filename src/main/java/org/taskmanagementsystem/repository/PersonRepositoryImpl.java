@@ -32,4 +32,10 @@ public Person findByEmail(String name)
 {
         return null;
 }
+
+@Override
+public boolean addPerson(Person person)
+{
+        return false;
+}
 }
