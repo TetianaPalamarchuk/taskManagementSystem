@@ -17,8 +17,8 @@ private List<Task> tasks;
 public Person() {
 }
 public Person(String name, String email, String pass) {
-        utils.security.Encoder encoder = new StringEncoder();
-        this.id = new UUID(100,1);
+        org.taskmanagementsystem.utils.security.Encoder encoder = new StringEncoder();
+        this.id = UUID.randomUUID();
         this.name = name;
         this.email = email;
         this.passwdHash = encoder.encode(pass);
@@ -43,8 +43,20 @@ public String getPasswdHash() {
         public List<Task> getTasks() {
                 return tasks;
         }
-
+        public String getEmail() { return email; }
         public void setRole(String role) {
                 this.role = role;
+        }
+        public void setId(UUID id) {
+                this.id = id;
+        }
+        public void setName(String name) {
+                this.name = name;
+        }
+        public void setEmail(String email) {
+                this.email = email;
+        }
+        public void setPasswdHash(String passwdHash) {
+                this.passwdHash = passwdHash;
         }
 }
