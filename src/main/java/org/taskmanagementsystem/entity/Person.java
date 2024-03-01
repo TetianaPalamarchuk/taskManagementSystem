@@ -11,18 +11,29 @@ private UUID id;
 private String name;
 private String email;
 private String  passwdHash;
-private String role;
+private boolean isManager;
 private List<Task> tasks;
 
 public Person() {
 }
+
+public boolean isManager()
+{
+        return isManager;
+}
+
+public void setManager(boolean manager)
+{
+        isManager = manager;
+}
+
 public Person(String name, String email, String pass) {
         org.taskmanagementsystem.utils.security.Encoder encoder = new StringEncoder();
         this.id = UUID.randomUUID();
         this.name = name;
         this.email = email;
         this.passwdHash = encoder.encode(pass);
-        this.role = "User";
+        this.isManager = false;
         this.tasks = new ArrayList<>();
 }
 public UUID getId() {
@@ -37,16 +48,12 @@ public String getLogin() {
 public String getPasswdHash() {
         return passwdHash;
 }
-        public String getRole() {
-                return role;
-        }
+
         public List<Task> getTasks() {
                 return tasks;
         }
         public String getEmail() { return email; }
-        public void setRole(String role) {
-                this.role = role;
-        }
+
         public void setId(UUID id) {
                 this.id = id;
         }
