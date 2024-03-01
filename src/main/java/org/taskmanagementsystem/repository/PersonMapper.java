@@ -16,12 +16,12 @@ public Person mapToObject(String str)
 
         UUID id = dto.getId("id");
         String name = dto.get("name");
-        String login = dto.get("login");
+        String email = dto.get("email");
         String passwd = dto.get("passwd_hash");
 
         person.setId(id);
         person.setName(name);
-        person.setLogin(login);
+        person.setEmail(email);
         person.setPasswdHash(passwd);
 
         return person;
@@ -34,7 +34,7 @@ public String mapToString(Person person)
 
         dto.set("id", person.getId())
                 .set("name", person.getName())
-                .set("login", person.getLogin())
+                .set("email", person.getEmail())
                 .set("passwd_hash", person.getPasswdHash());
 
         return dto.toString();
