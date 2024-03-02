@@ -1,7 +1,5 @@
 package org.taskmanagementsystem.entity;
-
 import org.taskmanagementsystem.utils.security.StringEncoder;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -16,17 +14,6 @@ private List<Task> tasks;
 
 public Person() {
 }
-
-public boolean isManager()
-{
-        return isManager;
-}
-
-public void setManager(boolean manager)
-{
-        isManager = manager;
-}
-
 public Person(String name, String email, String pass) {
         org.taskmanagementsystem.utils.security.Encoder encoder = new StringEncoder();
         this.id = UUID.randomUUID();
@@ -36,24 +23,22 @@ public Person(String name, String email, String pass) {
         this.isManager = false;
         this.tasks = new ArrayList<>();
 }
-public UUID getId() {
+        public UUID getId() {
         return id;
 }
-public String getName() {
+        public String getName() {
         return name;
 }
-public String getLogin() {
-        return email;
-}
-public String getPasswdHash() {
+        public String getPasswdHash() {
         return passwdHash;
 }
-
         public List<Task> getTasks() {
                 return tasks;
         }
         public String getEmail() { return email; }
-
+        public boolean isManager() {
+                return isManager;
+        }
         public void setId(UUID id) {
                 this.id = id;
         }
@@ -65,5 +50,8 @@ public String getPasswdHash() {
         }
         public void setPasswdHash(String passwdHash) {
                 this.passwdHash = passwdHash;
+        }
+        public void setManager(boolean manager) {
+                isManager = manager;
         }
 }
