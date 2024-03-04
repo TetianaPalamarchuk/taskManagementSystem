@@ -14,7 +14,7 @@ public Validator()
         constraints = new ArrayList<>();
 }
 
-Validator addConstraint(Constraint checker)
+Validator add(Constraint checker)
 {
         constraints.add(checker);
 

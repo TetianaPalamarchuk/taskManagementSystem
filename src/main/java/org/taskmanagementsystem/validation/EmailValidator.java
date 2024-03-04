@@ -1,48 +1,27 @@
 package org.taskmanagementsystem.validation;
 
-import org.taskmanagementsystem.dto.DTO;
-import org.taskmanagementsystem.dto.StringDTO;
 
-import java.util.List;
+import org.taskmanagementsystem.dto.StringDTO;
+import java.util.regex.Pattern;
 
 public class EmailValidator extends Validator {
+static public final String EMAIL_RE = "^[A-Za-z0-9+_.-]+@(.+)$";
+
 public EmailValidator()
 {
-        addConstraint(request ->
+        add(request ->
         {
                 var status = new StringDTO();
-                // email=test@domain.com
                 var email = request.get("email");
+                var pattern = Pattern.compile(EMAIL_RE);
+                var matcher = pattern.matcher(email);
 
                 status.set("status", "OK");
 
-//                if(email.matches("[a-zA-Z0-9]+@[a-zA-Z0-9.]+"))
-                // a@b
-                if(email.length() < 3) {
-                        status.set("error", "e-mail `" + email + "'"
-                                + " too short. The length must be > 3");
-
+                if(!matcher.matches()) {
                         status.set("status", "ERROR");
-                }
-
-               return status;
-        });
-
-        addConstraint(request ->
-        {
-                var status = new StringDTO();
-                // email=test@domain.com
-                var email = request.get("email");
-
-                status.set("status", "OK");
-                // a@b
-                var idx = email.indexOf('@');
-
-                if(idx == -1) {
-                        status.set("error", "e-mail `" + email + "'"
+                        status.set("message", "e-mail `" + email + "'"
                                 + " is malformed");
-
-                        status.set("status", "ERROR");
                 }
 
                 return status;
@@ -53,17 +32,22 @@ public static void main(String[] args)
 {
         Validator emailValidator = new EmailValidator();
 
-        var request = new StringDTO();
 //        dto.get("name"), dto.get("email"), dto.get("pass")
+        String email = "";
+        String name = "";
+        String pass = "";
+
+        var request = new StringDTO();
+
         request.set("email", "test@test.cloud");
+//        request.set("email", "test-test.cloud");
         request.set("name", "John");
-        request.set("pass", "John");
-
-
-
+        request.set("pass", "12edadad");
 
         var result = emailValidator.validate(request);
 
+        System.out.println(request);
         System.out.println(result);
+        System.out.println("Is OK? " + Validator.isOk(result));
 }
 }
