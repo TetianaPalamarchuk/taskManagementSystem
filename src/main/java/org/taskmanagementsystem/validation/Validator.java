@@ -27,7 +27,7 @@ static public boolean isOk(List<DTO> dto)
 
         return status.get("status").equals("OK");
 }
-List<DTO> validate(DTO request)
+public List<DTO> validate(DTO request)
 {
         List<DTO> result = new ArrayList<>();
         DTO status = new StringDTO();
